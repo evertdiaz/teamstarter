@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var emprendedor = require('./routes/emprendedor');
@@ -12,6 +13,7 @@ var registro = require('./routes/registro');
 var login = require('./routes/login');
 var startup = require('./routes/startup');
 var startups = require('./routes/startups');
+var api = require('./routes/api');
 
 
 var app = express();
@@ -29,6 +31,10 @@ app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+mongoose.connect('mongodb://ediazb:ediazb@ds147167.mlab.com:47167/heroku_l27gc88z')
+var db = mongoose.connection
+db.on('error', console.error.bind(console, 'connection error:'));
+
 app.use('/', index);
 app.use('/emprendedor', emprendedor);
 app.use('/emprendedores', emprendedores);
@@ -36,6 +42,8 @@ app.use('/login', login);
 app.use('/registro', registro);
 app.use('/startup', startup);
 app.use('/startups', startups);
+app.use('/api', api);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -44,6 +52,8 @@ app.use(function(req, res, next) {
 });
 
 // error handler
+
+
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
