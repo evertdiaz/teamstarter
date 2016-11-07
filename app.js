@@ -6,7 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+var emprendedor = require('./routes/emprendedor');
+var emprendedores = require('./routes/emprendedores');
+var registro = require('./routes/registro');
+var login = require('./routes/login');
+var startup = require('./routes/startup');
+var startups = require('./routes/startups');
+
 
 var app = express();
 
@@ -24,8 +30,12 @@ app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
-
+app.use('/emprendedor', emprendedor);
+app.use('/emprendedores', emprendedores);
+app.use('/login', login);
+app.use('/registro', registro);
+app.use('/startup', startup);
+app.use('/startups', startups);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

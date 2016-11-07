@@ -1,5 +1,444 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='shortcut icon', href='style/images/favicon.png')
+    title Team Starter
+    // Bootstrap core CSS
+    link(href='style/css/bootstrap.min.css', rel='stylesheet')
+    link(href='style/css/plugins.css', rel='stylesheet')
+    link(href='style.css', rel='stylesheet')
+    link(href='style/css/color/blue.css', rel='stylesheet')
+    link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic', rel='stylesheet', type='text/css')
+    link(href='style/type/icons.css', rel='stylesheet')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body
+    #preloader
+      #status
+        .spinner
+    .body-wrapper
+      .navbar.navbar-default.default
+        .container
+          .navbar-header
+            .basic-wrapper
+              a.btn.responsive-menu(data-toggle='collapse', data-target='.navbar-collapse')
+                i
+              .navbar-brand
+                a(href='/', style='color:#006ba0')
+                  Team TeamStarter
+                  // img.logo-light(src='#', srcset='style/images/logo.png 1x, style/images/logo@2x.png 2x', alt='')
+                  // img.logo-dark(src='#', srcset='style/images/logo-dark.png 1x, style/images/logo-dark@2x.png 2x', alt='')
+              // /.navbar-brand
+            // /.basic-wrapper
+          // /.navbar-header
+          nav.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a(href='/') Inicio
+              li
+                a(href='/startups') Startups
+              li
+                a(href='/emprendedores') Emprendedores
+              li
+                a(href='/registro') Registro/Login
+            // /.navbar-nav
+          // /.navbar-collapse
+        // /.container
+      // /.navbar
+      .tp-fullscreen-container.revolution
+        .tp-fullscreen
+          ul
+            li(data-transition='fade')
+              img(src='style/images/art/slider-bg1.jpg', alt='', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
+              .tp-caption.large.sfb.text-center(data-x='center', data-y='263', data-speed='900', data-start='800', data-easing='Sine.easeOut') Conectamos equipos
+              .tp-caption.medium.sfb.text-center(data-x='center', data-y='348', data-speed='900', data-start='1500', data-easing='Sine.easeOut') encuentra los co-fundadores correctos para tu idea
+              .tp-caption.sfb(data-x='center', data-y='420', data-speed='900', data-start='2200', data-easing='Sine.easeOut', data-endspeed='100')
+                a.btn.btn-large.btn-border(href='/registro') Registrate
+            li(data-transition='fade')
+              img(src='style/images/art/slider-bg2.jpg', alt='', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
+              .tp-caption.large.sfl.text-center(data-x='center', data-y='263', data-speed='900', data-start='800', data-easing='Sine.easeOut') Únete al equipo que esperabas
+              .tp-caption.medium.sfr.text-center(data-x='center', data-y='343', data-speed='900', data-start='1500', data-easing='Sine.easeOut') encuentra la idea y equipo ideal para ti
+              .tp-caption.sfb(data-x='center', data-y='420', data-speed='900', data-start='2200', data-easing='Sine.easeOut', data-endspeed='100')
+                a.btn.btn-large(href='/registro') Regístrate
+            li(data-transition='fade')
+              img(src='style/images/art/slider-bg3.jpg', alt='', data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')
+              .tp-caption.large.sfr(data-x='30', data-y='263', data-speed='900', data-start='800', data-easing='Sine.easeOut') Conoce a los mejores 
+              .tp-caption.medium.sfr(data-x='30', data-y='403', data-speed='900', data-start='1500', data-easing='Sine.easeOut') proyectos y equipos en tu ecosistema
+              .tp-caption.sfr(data-x='30', data-y='470', data-speed='900', data-start='2200', data-easing='Sine.easeOut', data-endspeed='100')
+                a.btn.btn-large(href='/startups') Explorar
+          .tp-bannertimer.tp-bottom
+        // /.tp-fullscreen-container
+      // /.revolution
+      .light-wrapper
+        .container.inner
+          .headline.text-center
+            h2 Bienvenido a Team Starter
+            p.lead.animated-text.letters.type
+              span la plataforma hecha para que conectes con
+              span.animated-text-wrapper.waiting
+                b.is-visible developers
+                b diseñadores
+                b marketeros
+                b administradores
+                b  tu nuevo socio
+          .divide30
+          .row.services
+            .col-sm-4
+              .service.text-center
+                .icon
+                  img(src='style/images/icons/lulu-web-browser.png', alt='')
+                h4 Frontend Developers
+                p Registrate o busca gente que se encargue del diseño del frontend de tu idea.
+              // /.service
+            // /column
+            .col-sm-4
+              .service.text-center
+                .icon
+                  img(src='style/images/icons/lulu-paint-palette.png', alt='')
+                h4 Diseñadores
+                p ¿Sabes diseñar o necesitas un diseñador? Acá tambien podras encontrarlos.
+              // /.service
+            // /column
+            .col-sm-4
+              .service.text-center
+                .icon
+                  img(src='style/images/icons/lulu-coding.png', alt='')
+                h4 Backend Developers
+                p
+                  | Si te encanta el backend registrate y forma tu equipo, sino de todas maneras tu idea necesitará un backend, encuéntralo aquí.
+              // /.service
+            // /column
+          // /.row
+          .divide30
+          .row.services
+            .col-sm-4
+              .service.text-center
+                .icon
+                  img(src='style/images/icons/lulu-chats.png', alt='')
+                h4 Sales Manager
+                p
+                  | Busca a la persona que se encargue de las ventas en tu startup, si esa persona eres tu, deja que te encuentren.
+              // /.service
+            // /column
+            .col-sm-4
+              .service.text-center
+                .icon
+                  img(src='style/images/icons/lulu-tv.png', alt='')
+                h4 Marketeros
+                p
+                  | Encuentra a los que se encarguen del marketing en tu startup, o encargate tu del marketing en una.
+              // /.service
+            // /column
+            .col-sm-4
+              .service.text-center
+                .icon
+                  img(src='style/images/icons/lulu-clipboard.png', alt='')
+                h4 Otros perfiles
+                p
+                  | ¡Regístrate ahora y encuentra los perfiles que necesite tu equipo, o deja que los equipos te encuentren!
+              // /.service
+            // /column
+          // /.row
+        // /.container
+      // /.light-wrapper
+      .white-wrapper
+        .col-image
+          .bg-wrapper.col-md-6
+            .bg-holder(style='background-image: url(style/images/art/about.jpg);')
+          // /.bg-wrapper
+          .container
+            .row
+              .col-md-5.col-md-offset-7.inner-col
+                .section-title
+                  h3 Perfiles
+                p.lead Estos son los perfiles mas buscados y con mayor actividad.
+                ul.progress-list
+                  li
+                    p
+                      | Backend Developer 
+                      em 90%
+                    .progress.plain
+                      .bar(style='width: 90%;')
+                  li
+                    p
+                      | Frontend Developer 
+                      em 80%
+                    .progress.plain
+                      .bar(style='width: 80%;')
+                  li
+                    p
+                      | Diseñador 
+                      em 85%
+                    .progress.plain
+                      .bar(style='width: 85%;')
+                  li
+                    p
+                      | Marketing 
+                      em 75%
+                    .progress.plain
+                      .bar(style='width: 50%;')
+                // /.progress-list
+              // /column
+            // /.row
+          // /.container
+        // /.col-image
+      // /.white-wrapper
+      .light-wrapper
+        .container.inner
+          .section-title.text-center
+            h3 Cómo iniciar
+            p.lead en pocos pasos serás tendrás un nuevo equipo
+          .thin3
+            .row.circle-wrapper
+              .col-sm-6.col-md-3
+                .circle.blue-bg
+                  .text 1. Regístrate
+              // /column
+              .col-sm-6.col-md-3
+                .circle.red-bg
+                  .text 2. Explora
+              // /column
+              .col-sm-6.col-md-3
+                .circle.green-bg
+                  .text 3. Contáctense
+              // /column
+              .col-sm-6.col-md-3
+                .circle.yellow-bg
+                  .text 4. ¡Emprendan!
+              // /column
+            // /.row
+            .divide30
+          // /.thin
+        // /.container
+      // /.light-wrapper
+      .parallax.parallax2.inverse-wrapper.customers
+        .container.inner.text-center
+          .testimonials.owl-carousel.thin
+            .item
+              blockquote
+                p
+                  | ¡Genial idea! Pude encontrar al desarrollador que necesitaba para comenzar mi startup.
+                  small.meta
+                    | Carlos Medina 
+                    span CEO & Founder
+            // /.item
+            .item
+              blockquote
+                p
+                  | Obtuve varios contactos y armamos un equipo, ¡ahora estamos listos para postular a cualquier concurso!
+                  small.meta
+                    | Cindy Gutierrez 
+                    span Especialista de Marketing
+            // /.item
+            .item
+              blockquote
+                p
+                  | Con Team Starter logramos conocernos, ahora estamos a punto de postular a Startup Peru. Y nos vamos por todo.
+                  small.meta
+                    | William Borjas 
+                    span CEO & Founder
+            // /.item
+            .item
+              blockquote
+                p
+                  | TeamStarter es genial, puedes concer muchas personas de tu rubro y hacer proyectos en confianza.
+                  small.meta
+                    | Evert Díaz 
+                    span CEO Gentlers
+            // /.item
+          // /.testimonials
+        // /.container
+      // /.parallax
+      .light-wrapper
+        .container.inner
+          .section-title.text-center
+            h3 Últimos equipos registrados
+            p.lead estos son los ultimos proyectos que están buscando gente como tu
+          .timeline
+            .date-title
+              span Tecnología
+            .row
+              .col-sm-6.timeline-item
+                .arrow
+                .post-content
+                  .row
+                    .col-sm-3.col-md-5
+                      figure
+                        a
+                          .text-overlay
+                            .info
+                              span .
+                          img(src='style/images/art/tb1.jpg', alt='')
+                    // /column
+                    .col-sm-9.col-md-7
+                      h4.post-title
+                        a(href='/startup/vivelus') Vivelus
+                      .meta
+                        span.date
+                          a.link-effect(href='') 05 Noviembre
+                        span.category
+                          a.link-effect(href='') Tecnología
+                        span.comments
+                          a.link-effect(href='')
+                            i.icon-user-1
+                            |  2
+                      p Aplicacion para encontrar lugares para alquilar y donde vivir.
+                      a.more.link-effect(href='/startup/vivelus') Ver Más »
+                    // /column
+                  // /.row
+                // /.post-content
+              // /column
+              .col-sm-6.timeline-item.right
+                .arrow
+                .post-content
+                  .row
+                    .col-sm-3.col-md-5
+                      figure
+                        a
+                          .text-overlay
+                            .info
+                              span .
+                          img(src='style/images/art/tb2.jpg', alt='')
+                    // /column
+                    .col-sm-9.col-md-7
+                      h4.post-title
+                        a(href='/startup/gento') Gento
+                      .meta
+                        span.date
+                          a.link-effect(href='') 04 Noviembre
+                        span.category
+                          a.link-effect(href='') Moda
+                        span.comments
+                          a.link-effect(href='')
+                            i.icon-user-1
+                            |  4
+                      p eCommerce inteligente que te ofrece opciones efectivas.
+                      a.more.link-effect(href='/startup/gento') Ver Más »
+                    // /column
+                  // /.row
+                // /.post-content
+              // /column
+            // /.row
+          // /.timeline
+        // /.container
+      // /.light-wrapper
+      .parallax.parallax1
+        .container.inner.bp0
+          .row
+            .col-md-6.col-md-push-6
+              .divide50
+              .headline
+                h2 Consigue un equipo
+                p.lead
+                  | Explora todos los equipos registrados en Team Starter, o crea uno y encuentra los mejores miembros.
+                .divide25
+                a.btn(href='/startups') Explorar
+            // /column
+            .col-md-6.col-md-pull-6.text-center
+              img.main(src='style/images/art/tablet.png', alt='')
+            // /column
+          // /.row
+        // /.container
+      // /.parallax
+      .light-wrapper
+        .container.inner
+          .section-title.text-center
+            h3 Confían en Nosotros
+            p.lead Compañías que nos avalan
+          .carousel-wrapper
+            .carousel.clients
+              .item
+                img(src='style/images/art/c1.png', alt='')
+              .item
+                img(src='style/images/art/c2.png', alt='')
+              .item
+                img(src='style/images/art/c3.png', alt='')
+              .item
+                img(src='style/images/art/c4.png', alt='')
+              .item
+                img(src='style/images/art/c5.png', alt='')
+              .item
+                img(src='style/images/art/c6.png', alt='')
+              .item
+                img(src='style/images/art/c7.png', alt='')
+              .item
+                img(src='style/images/art/c8.png', alt='')
+            // /.carousel
+          // /.carousel-wrapper
+        // /.container
+      // /.light-wrapper
+      .color-wrapper.inverse-wrapper.blue-bg
+        .container.inner.text-center
+          .thin
+            h2 No esperes mas, consigue un equipo
+            .divide10
+            a.btn.btn-border.bm0(href='/registro') Regístrarme
+          // /.thin
+        // /.container
+      // /.color-wrapper
+      footer.inverse-wrapper
+        .container.inner
+          .row
+            .col-sm-4
+              h3.section-title.widget-title Síguenos
+              p Revisa nuestras redes sociales.
+              ul.social
+                li
+                  a(href='https://twitter.com/teamstarter')
+                    i.icon-s-twitter
+                li
+                  a(href='https://facebook.com/teamstarter')
+                    i.icon-s-facebook
+                li
+                  a(href='https://instagram.com/teamstarter')
+                    i.icon-s-instagram
+                li
+                  a(href='https://linkedin.com/company/teamstarter')
+                    i.icon-s-linkedin
+            .col-sm-4
+              .widget
+                TeamStarter
+                // img(src='style/images/logo.png', data-at2x='style/images/logo@2x.png', alt='')
+                .divide20
+                p En Team Starter queremos conectar equipos con emprendedores claves. 
+              // /.widget
+            .col-sm-4
+              .widget
+                h3.section-title.widget-title ¿Tienes dudas?
+                p Consúltanos lo que quieras.
+                .contact-info
+                  i.icon-phone
+                  | (01) 704 2500 
+                  br
+                  i.icon-mail
+                  a(href='hola@teamstarter.tk') hola@teamstarter.tk
+          // /.row
+          hr
+          p.copyright.pull-left © 2016 Team Starter
+          ul.footer-menu.pull-right
+            li
+              a(href='/') Inicio
+            li
+              a(href='/startups') Startups
+            li
+              a(href='/emprendedores') Emprendedores
+            li
+              a(href='/login') Login
+            li
+              a(href='/registro') Registro
+        // .container
+      // /footer
+    // /.body-wrapper
+    script(src='style/js/jquery.min.js')
+    script(src='style/js/bootstrap.min.js')
+    script(src='style/js/plugins.js')
+    script(src='style/js/jquery.themepunch.tools.min.js')
+    script(src='style/js/scripts.js')
