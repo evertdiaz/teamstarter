@@ -80,10 +80,11 @@ html(lang='en')
               label(for='mail') Correo
               input(type='text', id='mail', placeholder='Enter your Last Name')
               br
-              button#envio.button.landing-outro__button.button--large
+              button#envio-reg.button.landing-outro__button.button--large
                 span
-                  | Conectar en facebook
-            a(href='#', id='login') ¿Ya tienes una cuenta? Ingresar
+                  | Registrar
+              br
+              a#login-btn.link-effect(href='#') ¿Ya tienes una cuenta? Ingresar
 
             #login-form
               label(for='username') Usuario
@@ -91,12 +92,12 @@ html(lang='en')
               label(for='password') Contraseña
               input(type='password', id='contraseña', placeholder='Now your password')
               br
-              button#envio.button.landing-outro__button.button--large
+              button#envio-log.button.landing-outro__button.button--large
                 span
-                  | Conectar con facebook
+                  | Entrar
               br
               br
-              a(href='#', id='login') ¿No tienes una cuenta? Regístrate
+              a#register-btn.link-effect(href='#') ¿No tienes una cuenta? Regístrate
 
     script(src='style/js/jquery.min.js')
     script(src='style/js/bootstrap.min.js')

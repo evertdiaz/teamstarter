@@ -1,5 +1,5 @@
 
-$('#envio').on('click', function() {
+$('#envio-reg').on('click', function() {
 	var $data = $('#registro input')
 	var data = $.map($data, obj => obj.value)
 	var sendInfo = {
@@ -14,10 +14,19 @@ $('#envio').on('click', function() {
 
     $.post('/api/register', sendInfo, function(data, textStatus, jqXHR) {
     	if(textStatus) {
-    		alert('Todo ok')
-    		location.href = '/'
+    		alert('Gracias por registrarte')
+    		location.href = '/dashboard'
     	} 
-    		else alert('Todo MAL')
+    		else alert('Error de conexion')
 
     })
+})
+
+$('#login-btn').click(function() {
+  $('#registro').css('display','none')
+  $('#login-form').css('display','block')
+})
+$('#register-btn').click(function() {
+  $('#registro').css('display','block')
+  $('#login-form').css('display','none')
 })
