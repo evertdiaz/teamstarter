@@ -20,7 +20,8 @@ var teamSchema = new Schema({
 	resumen: String,
 	descripcion: String,
 	nivel: String,
-	precio: Number,
+	perfiles: String,
+	mail: String,
 	user: {
 		type: Schema.ObjectId,
 		ref: 'user'

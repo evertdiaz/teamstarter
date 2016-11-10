@@ -62,198 +62,44 @@ html(lang='en')
             .date-title
               span Tecnología
             .row
-              .col-sm-6.timeline-item
-                .arrow
-                .post-content
-                  .row
-                    .col-sm-3.col-md-5
-                      figure
-                        a
-                          .text-overlay
-                            .info
-                              span .
-                          img(src='style/images/art/tb1.jpg', alt='')
-                    // /column
-                    .col-sm-9.col-md-7
-                      h4.post-title
-                        a(href='/startup/vivelus') Vivelus
-                      .meta
-                        span.date
-                          a.link-effect(href='') 05 Noviembre
-                        span.category
-                          a.link-effect(href='') Tecnología
-                        span.comments
-                          a.link-effect(href='')
-                            i.icon-user-1
-                            |  2
-                      p Aplicacion para encontrar lugares para alquilar y donde vivir.
-                      a.more.link-effect(href='/startup/vivelus') Ver Más »
-                    // /column
+              each thing in data
+                .col-sm-6.timeline-item
+                  .arrow
+                  .post-content
+                    .row
+                      .col-sm-3.col-md-5
+                        figure
+                          a
+                            .text-overlay
+                              .info
+                                span .
+                            img(src='style/images/art/tb2.jpg', alt='')
+                      // /column
+                      .col-sm-9.col-md-7
+                        h4.post-title
+                          a(href='/startup/gento')=thing.nombre
+                        .meta
+                          span.date
+                            a.link-effect(href='') 04 Noviembre
+                          span.category
+                            a.link-effect(href='')=thing.rubro
+                          span.comments
+                            a.link-effect(href='')
+                              i.icon-user-1
+                              |  4
+                        p= thing.resumen
+                        a.more.link-effect(href='/startup/#{thing.nombre}') Ver Más »
+                      // /column
                   // /.row
                 // /.post-content
               // /column
-              .col-sm-6.timeline-item.right
-                .arrow
-                .post-content
-                  .row
-                    .col-sm-3.col-md-5
-                      figure
-                        a
-                          .text-overlay
-                            .info
-                              span .
-                          img(src='style/images/art/tb2.jpg', alt='')
-                    // /column
-                    .col-sm-9.col-md-7
-                      h4.post-title
-                        a(href='/startup/gento') Gento
-                      .meta
-                        span.date
-                          a.link-effect(href='') 04 Noviembre
-                        span.category
-                          a.link-effect(href='') Moda
-                        span.comments
-                          a.link-effect(href='')
-                            i.icon-user-1
-                            |  4
-                      p eCommerce inteligente que te ofrece opciones efectivas.
-                      a.more.link-effect(href='/startup/gento') Ver Más »
-                    // /column
-                  // /.row
-                // /.post-content
-              // /column
-            // /.row
-            .date-title
-              span Tecnología
-            .row
-              .col-sm-6.timeline-item
-                .arrow
-                .post-content
-                  .row
-                    .col-sm-3.col-md-5
-                      figure
-                        a
-                          .text-overlay
-                            .info
-                              span .
-                          img(src='style/images/art/tb1.jpg', alt='')
-                    // /column
-                    .col-sm-9.col-md-7
-                      h4.post-title
-                        a(href='/startup/vivelus') Vivelus
-                      .meta
-                        span.date
-                          a.link-effect(href='') 05 Noviembre
-                        span.category
-                          a.link-effect(href='') Tecnología
-                        span.comments
-                          a.link-effect(href='')
-                            i.icon-user-1
-                            |  2
-                      p Aplicacion para encontrar lugares para alquilar y donde vivir.
-                      a.more.link-effect(href='/startup/vivelus') Ver Más »
-                    // /column
-                  // /.row
-                // /.post-content
-              // /column
-              .col-sm-6.timeline-item.right
-                .arrow
-                .post-content
-                  .row
-                    .col-sm-3.col-md-5
-                      figure
-                        a
-                          .text-overlay
-                            .info
-                              span .
-                          img(src='style/images/art/tb2.jpg', alt='')
-                    // /column
-                    .col-sm-9.col-md-7
-                      h4.post-title
-                        a(href='/startup/gento') Gento
-                      .meta
-                        span.date
-                          a.link-effect(href='') 04 Noviembre
-                        span.category
-                          a.link-effect(href='') Moda
-                        span.comments
-                          a.link-effect(href='')
-                            i.icon-user-1
-                            |  4
-                      p eCommerce inteligente que te ofrece opciones efectivas.
-                      a.more.link-effect(href='/startup/gento') Ver Más »
-                    // /column
-                  // /.row
-                // /.post-content
-              // /column
-            // /.row
-            .date-title
-              span Tecnología
-            .row
-              .col-sm-6.timeline-item
-                .arrow
-                .post-content
-                  .row
-                    .col-sm-3.col-md-5
-                      figure
-                        a
-                          .text-overlay
-                            .info
-                              span .
-                          img(src='style/images/art/tb1.jpg', alt='')
-                    // /column
-                    .col-sm-9.col-md-7
-                      h4.post-title
-                        a(href='/startup/vivelus') Vivelus
-                      .meta
-                        span.date
-                          a.link-effect(href='') 05 Noviembre
-                        span.category
-                          a.link-effect(href='') Tecnología
-                        span.comments
-                          a.link-effect(href='')
-                            i.icon-user-1
-                            |  2
-                      p Aplicacion para encontrar lugares para alquilar y donde vivir.
-                      a.more.link-effect(href='/startup/vivelus') Ver Más »
-                    // /column
-                  // /.row
-                // /.post-content
-              // /column
-              .col-sm-6.timeline-item.right
-                .arrow
-                .post-content
-                  .row
-                    .col-sm-3.col-md-5
-                      figure
-                        a
-                          .text-overlay
-                            .info
-                              span .
-                          img(src='style/images/art/tb2.jpg', alt='')
-                    // /column
-                    .col-sm-9.col-md-7
-                      h4.post-title
-                        a(href='/startup/gento') Gento
-                      .meta
-                        span.date
-                          a.link-effect(href='') 04 Noviembre
-                        span.category
-                          a.link-effect(href='') Moda
-                        span.comments
-                          a.link-effect(href='')
-                            i.icon-user-1
-                            |  4
-                      p eCommerce inteligente que te ofrece opciones efectivas.
-                      a.more.link-effect(href='/startup/gento') Ver Más »
-                    // /column
-                  // /.row
-                // /.post-content
-              // /column
-            // /.row
+              
+            
           // /.timeline
         // /.container
       // /.light-wrapper
+
+
     script(src='style/js/jquery.min.js')
     script(src='style/js/bootstrap.min.js')
     script(src='style/js/plugins.js')

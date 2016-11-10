@@ -9948,3 +9948,14 @@ ol.linenums li {
 		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
 	}
 }
+.emprendedor{
+  padding-bottom: 40px;
+}
+.img-emp{
+  max-width: 200px;
+  max-height: 200px;
+}
+.img-emp-dest{
+  max-width: 300px;
+  max-height: 300px;
+}

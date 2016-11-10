@@ -53,7 +53,181 @@ html(lang='en')
           // /.navbar-collapse
         // /.container
       // /.navbar
-
+      .offset
+      .light-wrapper
+        .container.inner.pegado
+          .section-title.text-center
+            h3 Emprendedores destacados
+          .row.grid-view
+            .col-sm-4.text-center
+              figure
+                img(src='style/images/art/t1.jpg', alt='').img-emp-dest
+              h4.post-title Nikolas Brooten
+              .meta Sales Manager
+              p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo.
+              ul.social
+                li
+                  a(href='#')
+                    i.icon-s-twitter
+                li
+                  a(href='#')
+                    i.icon-s-facebook
+                li
+                  a(href='#')
+                    i.icon-s-gplus
+            // /column
+            .col-sm-4.text-center
+              figure
+                img(src='style/images/art/t2.jpg', alt='').img-emp-dest
+              h4.post-title Coriss Ambady
+              .meta Marketing Specialist
+              p Morbi leo risus, porta ac consectetur ac, vestibulum at eros sed posuere quam.
+              ul.social
+                li
+                  a(href='#')
+                    i.icon-s-twitter
+                li
+                  a(href='#')
+                    i.icon-s-facebook
+                li
+                  a(href='#')
+                    i.icon-s-linkedin
+            // /column
+            .col-sm-4.text-center
+              figure
+                img(src='style/images/art/t3.jpg', alt='').img-emp-dest
+              h4.post-title Barclay Widerski
+              .meta Computer Engineer
+              p
+                | Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis.
+              ul.social
+                li
+                  a(href='#')
+                    i.icon-s-twitter
+                li
+                  a(href='#')
+                    i.icon-s-github
+                li
+                  a(href='#')
+                    i.icon-s-gplus
+            // /column
+          // /.row
+          .container.inner
+            .section-title.text-center
+              h3 Conoce a todos y elige tu nuevo socio
+            .row.grid-view
+              each thing in data
+                .col-sm-3.text-center.emprendedor
+                  figure
+                    img.img-circle.img-emp(src='style/images/art/t1.jpg', alt='')
+                  h4.post-title=thing.username
+                  .meta=thing.perfil
+                  p=thing.bio
+                  ul.social
+                    li
+                      a(href='#')
+                        i.icon-s-twitter
+                    li
+                      a(href='#')
+                        i.icon-s-facebook
+                    li
+                      a(href='#')
+                        i.icon-s-gplus
+            // /.row
+        // /.container
+      // /.light-wrapper
+      .parallax.parallax2.inverse-wrapper.customers
+        .container.inner.text-center
+          .testimonials.owl-carousel.thin
+            .item
+              blockquote
+                p
+                  | Praesent commodo cursus magna, vel scelerisque nisl consectetur. Nullam dolor nibh ultricies vehicula elit vulputate tristique egestas.
+                  small.meta
+                    | Nikolas Brooten 
+                    span Sales Manager
+            // /.item
+            .item
+              blockquote
+                p
+                  | Cras justo odio, dapibus facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.
+                  small.meta
+                    | Coriss Ambady 
+                    span Marketing Specialist
+            // /.item
+            .item
+              blockquote
+                p
+                  | Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis id vestibulum. Donec sed odio dui. Sed posuere consectetur est at lobortis.
+                  small.meta
+                    | Barclay Widerski 
+                    span Strategy Director
+            // /.item
+            .item
+              blockquote
+                p
+                  | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet.
+                  small.meta
+                    | Elsie Spear 
+                    span Computer Engineer
+            // /.item
+          // /.testimonials
+        // /.container
+      // /.parallax
+      
+      footer.inverse-wrapper
+        .container.inner
+          .row
+            .col-sm-4
+              h3.section-title.widget-title Síguenos
+              p Revisa nuestras redes sociales.
+              ul.social
+                li
+                  a(href='https://twitter.com/teamstarter')
+                    i.icon-s-twitter
+                li
+                  a(href='https://facebook.com/teamstarter')
+                    i.icon-s-facebook
+                li
+                  a(href='https://instagram.com/teamstarter')
+                    i.icon-s-instagram
+                li
+                  a(href='https://linkedin.com/company/teamstarter')
+                    i.icon-s-linkedin
+            .col-sm-4
+              .widget
+                TeamStarter
+                // img(src='style/images/logo.png', data-at2x='style/images/logo@2x.png', alt='')
+                .divide20
+                p En Team Starter queremos conectar equipos con emprendedores claves. 
+              // /.widget
+            .col-sm-4
+              .widget
+                h3.section-title.widget-title ¿Tienes dudas?
+                p Consúltanos lo que quieras.
+                .contact-info
+                  i.icon-phone
+                  | (01) 704 2500 
+                  br
+                  i.icon-mail
+                  a(href='hola@teamstarter.tk') hola@teamstarter.tk
+          // /.row
+          hr
+          p.copyright.pull-left © 2016 Team Starter
+          ul.footer-menu.pull-right
+            li
+              a(href='/') Inicio
+            li
+              a(href='/startups') Startups
+            li
+              a(href='/emprendedores') Emprendedores
+            li
+              a(href='/login') Login
+            li
+              a(href='/registro') Registro
+        // .container
+      // /footer
+    // /.body-wrapper
 
 
     script(src='style/js/jquery.min.js')
