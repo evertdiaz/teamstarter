@@ -119,8 +119,10 @@ html(lang='en')
               each thing in data
                 .col-sm-3.text-center.emprendedor
                   figure
-                    img.img-circle.img-emp(src='style/images/art/t1.jpg', alt='')
-                  h4.post-title=thing.username
+                    a(href='/emprendedor/#{thing.username}')
+                      img.img-circle.img-emp(src='style/images/art/t1.jpg', alt='')
+                  a(href='/emprendedor/#{thing.username}')
+                    h4.post-title=thing.username
                   .meta=thing.perfil
                   p=thing.bio
                   ul.social

@@ -22,6 +22,29 @@ $('#envio-reg').on('click', function() {
     })
 })
 
+$('#reg-startup').on('click', function() {
+  var $data = $('#registro input')
+  var data = $.map($data, obj => obj.value)
+  var sendInfo = {
+           nombre: data[0],
+           rubro: data[1],
+           resumen: data[2],
+           descripcion: data[3],
+           nivel: data[4],
+           perfiles: data[5],
+           mail: data[6]
+        }
+
+    $.post('/api/project', sendInfo, function(data, textStatus, jqXHR) {
+      if(textStatus) {
+        alert('Gracias por registrar una nueva Startup')
+        location.href = '/startups'
+      } 
+        else alert('Error de conexion')
+
+    })
+})
+
 $('#login-btn').click(function() {
   $('#registro').css('display','none')
   $('#login-form').css('display','block')

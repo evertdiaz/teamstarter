@@ -77,7 +77,7 @@ html(lang='en')
                       // /column
                       .col-sm-9.col-md-7
                         h4.post-title
-                          a(href='/startup/gento')=thing.nombre
+                          a(href='/startup/#{thing.nombre}')=thing.nombre
                         .meta
                           span.date
                             a.link-effect(href='') 04 Noviembre
@@ -93,8 +93,10 @@ html(lang='en')
                   // /.row
                 // /.post-content
               // /column
-              
-            
+          .timeline
+            .date-title
+              a(href='/startup/crear')
+                span Registra tu startup
           // /.timeline
         // /.container
       // /.light-wrapper

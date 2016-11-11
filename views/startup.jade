@@ -57,9 +57,13 @@ html(lang='en')
         .light-wrapper
           .container.inner
             .section-title.text-center
-              h3.link-effect=thing.username
+              h3.link-effect=thing.nombre
             .row
               .col-sm-6.timeline-item
+                br
+                br
+                p=thing.resumen
+              .col-sm-6.timeline-item.right
                 .arrow
                 .post-content
                   .row
@@ -73,24 +77,111 @@ html(lang='en')
                     // /column
                     .col-sm-9.col-md-7
                       h4.post-title
-                        a(href='/startup/vivelus')=thing.username
+                        p.link-effect.text-center=thing.nombre
                       .meta
                         span.category
-                          a.link-effect=thing.perfil
+                          a=thing.nivel
                         br
-                      p=thing.skills
+                      p=thing.perfiles
                       a.more.link-effect(href='/startup/vivelus') 
                     // /column
                   // /.row
                 // /.post-content
               // /column
-              .col-sm-6.timeline-item
-                br
-                br
-                p=thing.bio
-                p=thing.descripcion
+              .col-sm-12
+                .section-title.text-center
+                  h4.link-effect Descripcion
+                p.text-center=thing.descripcion
+              
             // /.row
-            
+            .light-wrapper
+              .container.inner
+                .section-title.text-center
+                  h3 Perfiles actuales
+                .row.grid-view
+                  .col-sm-3.text-center.emprendedor
+                    figure
+                      a
+                        img.img-circle.img-emp(src='../style/images/art/t1.jpg', alt='')
+                    a 
+                      h4 Backend
+                    ul.social
+                      li
+                        a(href='#')
+                          i.icon-s-twitter
+                      li
+                        a(href='#')
+                          i.icon-s-facebook
+                      li
+                        a(href='#')
+                          i.icon-s-gplus
+            .light-wrapper
+              .container.inner
+                .section-title.text-center
+                  h3 Están Buscando
+                .row.grid-view
+                  .col-sm-3.text-center.emprendedor
+                    figure
+                      a
+                        img.img-circle.img-emp(src='../style/images/art/t1.jpg', alt='')
+                    a 
+                      h4 Frontend
+                    ul.social
+                      li
+                        a(href='#')
+                          i.icon-s-twitter
+                      li
+                        a(href='#')
+                          i.icon-s-facebook
+                      li
+                        a(href='#')
+                          i.icon-s-gplus
+                  .col-sm-3.text-center.emprendedor
+                    figure
+                      a
+                        img.img-circle.img-emp(src='../style/images/art/t1.jpg', alt='')
+                    a 
+                      h4 Diseñador
+                    ul.social
+                      li
+                        a(href='#')
+                          i.icon-s-twitter
+                      li
+                        a(href='#')
+                          i.icon-s-facebook
+                      li
+                        a(href='#')
+                          i.icon-s-gplus
+                  .col-sm-3.text-center.emprendedor
+                    figure
+                      a
+                        img.img-circle.img-emp(src='../style/images/art/t1.jpg', alt='')
+                    a 
+                      h4 Marketing
+                    ul.social
+                      li
+                        a(href='#')
+                          i.icon-s-twitter
+                      li
+                        a(href='#')
+                          i.icon-s-facebook
+                      li
+                        a(href='#')
+                          i.icon-s-gplus
+                
+            .light-wrapper
+              .container.inner
+                .section-title.text-center
+                  h3.link-effect Contactar
+                  .col-sm-4
+                    br
+                  .col-sm-4
+                    .date-title
+                      form(action='https://formspree.io/#{thing.mail}', method='POST')
+                        input(type='text', name='name')
+                        input(type='email', name='_replyto')
+                        input(type='submit', value='Send')  
+            // /.row
 
             // /.timeline
             // /.container
@@ -164,16 +255,7 @@ html(lang='en')
                     // /column
                   // /.row
                 // /.timeline
-            .section-title.text-center
-              .col-sm-4
-                br
-              .col-sm-4
-                .date-title
-                  span Contactar
-                  form(action='https://formspree.io/#{thing.mail}', method='POST')
-                    input(type='text', name='name')
-                    input(type='email', name='_replyto')
-                    input(type='submit', value='Send')
+            
     script(src='../style/js/jquery.min.js')
     script(src='../style/js/bootstrap.min.js')
     script(src='../style/js/plugins.js')
