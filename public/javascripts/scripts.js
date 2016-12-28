@@ -1,25 +1,32 @@
 
 $('#envio-reg').on('click', function() {
-	var $data = $('#registro input')
+	var $data = $('#registro input[type="text"]')
+  var psw = $('#registro input[type="password"]').val()
+  var perf = $('#registro select').val()
 	var data = $.map($data, obj => obj.value)
+  var $skills = $(':checkbox:checked').map(function() {
+      return this.value;
+    }).get()
+
 	var sendInfo = {
            username: data[0],
-           password: data[1],
-           perfil: data[2],
-           bio: data[3],
-           skills: data[4],
-           phone: data[5],
-           mail: data[6]
+           password: psw,
+           nombres: data[1],
+           perfil: perf,
+           bio: data[2],
+           skills: JSON.stringify($skills),
+           phone: data[3],
+           mail: data[4]
         }
+  console.log(sendInfo)
+  $.post('/api/register', sendInfo, function(data, textStatus, jqXHR) {
+  	if(textStatus) {
+  		alert('Gracias por registrarte')
+  		location.href = '/emprendedores'
+  	} 
+  		else alert('Error de conexion')
 
-    $.post('/api/register', sendInfo, function(data, textStatus, jqXHR) {
-    	if(textStatus) {
-    		alert('Gracias por registrarte')
-    		location.href = '/dashboard'
-    	} 
-    		else alert('Error de conexion')
-
-    })
+  })
 })
 
 $('#reg-startup').on('click', function() {

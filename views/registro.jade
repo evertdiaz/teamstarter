@@ -58,6 +58,7 @@ html(lang='en')
         .container.inner
           .headline.text-center
             h2 Registrate
+            
             #registro
               label(for='name') Usuario
               input(type='text', id='name', placeholder='Ingreso tu Nombre de usuario')
@@ -65,14 +66,37 @@ html(lang='en')
               label(for='password') Contraseña
               input(type='password', id='password', placeholder='Ahora tu contraseña')
               br
-              label(for='perfil') Perfil
-              input(type='text', id='perfil', placeholder='Elige tu perfil: Backend, Frontend, FullStack, Negocios, Diseño, Marketing, legal, finanzas')
+              label(for='names') Nombres y Apellidos:
+              input(type='text', id='names', placeholder='Ingresa tus nombres y apellidos completos')
+              br
               br
               label(for='bio') Acerca de ti
               input(type='text', id='bio', placeholder='Cuéntanos un poco sobre ti')
               br
-              label(for='skills') Habilidades
-              input(type='text', id='skills', placeholder='Qué habilidades tienes')
+              label(for='profile') Elige tu perfil:
+              select(name='profile')
+                option(value='backend') Backend
+                option(value='frontend') Frontend
+                option(value='fullstack') Full Stack
+                option(value='diseño') Diseño
+                option(value='marketing') Marketing
+                option(value='negocios') Negocios
+                option(value='finanzas') Finanzas
+                option(value='legal') Legal
+              br
+              label(for='habs') Que habilidades tienes
+              br
+              input(type='checkbox', name='backend', value='backend')
+              |  Backend  |
+              input(type='checkbox', name='frontend', value='frontend')
+              |  Frontend  |
+              input(type='checkbox', name='diseño', value='diseño') 
+              |  Diseño | 
+              input(type='checkbox', name='negocios', value='negocios')
+              |  Negocios  |
+              input(type='checkbox', name='marketing', value='marketing')
+              |  Marketing  |
+              
               br
               label(for='phone') Telefono
               input(type='text', id='phone', placeholder='Tu teléfono')

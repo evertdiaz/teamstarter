@@ -5,9 +5,10 @@ var Schema =  mongoose.Schema
 var UserSchema = new Schema({
 	username: String,
 	password: String,
+	nombres: String,
 	perfil: String,
 	bio: String,
-	skills: String,
+	skills: Array,
 	phone: Number,
 	mail: String
 })

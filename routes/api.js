@@ -10,22 +10,26 @@ router.get('/users', function(req, res, next) {
 })
 
 router.post('/register', function(req, res, next) {
+	console.log('BODY: '+req.body)
 	var username = req.body.username
 	var password = req.body.password
+	var nombres = req.body.nombres
 	var perfil = req.body.perfil
 	var bio = req.body.bio
-	var skills = req.body.skills
+	var skills = JSON.parse(req.body.skills)
 	var phone = req.body.phone
 	var mail = req.body.mail
 
 	var newuser = new User()
 	newuser.username = username
 	newuser.password = password
+	newuser.nombres = nombres
 	newuser.perfil = perfil
 	newuser.bio = bio
 	newuser.skills = skills
 	newuser.phone = phone
 	newuser.mail = mail
+	console.log('newuser: '+ newuser)
 	newuser.save(function(err, savedUser) {
 		if(err) {
 			console.log(err)
